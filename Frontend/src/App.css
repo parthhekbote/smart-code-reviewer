@@ -1,0 +1,98 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+  width: 100%;
+}
+
+main {
+  height: 100%;
+  width: 100%;
+  padding: 1.5rem;
+  display: flex;
+  gap: 1rem;
+}
+
+main .left,
+main .right {
+  height: 100%;
+  flex-basis: 50%;
+  border-radius: 0.7rem;
+}
+
+main .left {
+  background-color: #000000;
+  position: relative;
+}
+
+.left .code,
+.code pre,
+.code pre code {
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  border-radius: 0.7rem;
+  background-color: #0c0c0c;
+}
+
+.code {
+  position: relative;
+}
+
+.code .placeholder {
+  position: absolute;
+  top: 0.75rem;
+  left: 0.75rem;
+  color: #8a8a8a;
+  font-family: 'Fira Code', monospace;
+  pointer-events: none; /* allow clicks to pass through to the editor */
+  user-select: none;
+}
+
+main .left .review {
+  position: absolute;
+  bottom: 1rem;
+  right: 1rem;
+  background-color: rgb(219, 219, 255);
+  color: #000000;
+  padding: 0.5rem 2rem;
+  font-weight: 500;
+  cursor: pointer;
+  user-select: none;
+  border-radius: 0.7rem;
+  border: none;
+  transition: all 0.2s ease;
+}
+
+main .left .review:disabled {
+  background-color: rgb(180, 180, 180);
+  cursor: not-allowed;
+}
+
+main .left .review:not(:disabled):hover {
+  background-color: rgb(200, 200, 255);
+  transform: scale(1.05);
+}
+
+.error {
+  color: #ff6b6b;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-radius: 0.5rem;
+  background-color: rgba(255, 107, 107, 0.1);
+  font-size: 1rem;
+}
+
+
+main .right {
+  background-color: #343434;
+  padding: 1rem 2rem;
+  font-size: 1.5rem;
+  overflow: auto;
+}
